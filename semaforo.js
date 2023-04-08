@@ -4,13 +4,13 @@ let corIndex = 0;
 let intervalId = null;
 
 const semaforo = (event) =>{
-    //pararAuto();
-    console.log = (event.target.id);
+    pararAuto();
+    turnOn[event.target.id]();
 }
 
 const nextIndex = () => {
 
-corIndex = corIndex < 2 ? corIndex++ : 0;
+corIndex = corIndex < 3 ? corIndex++ : 0;
 
     if(corIndex < 2){
         corIndex++
@@ -23,7 +23,7 @@ const alteracor = () => {
     const cores = ['vermelho', 'amarelo', 'verde']
     const cor = cores [corIndex];
     turnOn[cor]();
-    nextIndex;
+    nextIndex();
 }
 
 const pararAuto = () => {
