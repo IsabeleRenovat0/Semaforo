@@ -4,7 +4,7 @@ let corIndex = 0;
 let intervalId = null;
 
 const semaforo = (event) =>{
-    pararAuto();
+    //pararAuto();
     console.log = (event.target.id);
 }
 
